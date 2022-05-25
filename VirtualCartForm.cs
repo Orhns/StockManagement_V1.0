@@ -26,6 +26,38 @@ namespace StockManagement_V1._0
          //setting account balance 50 when the form load
          acc.Balance = 50;
          label4.Text = acc.Balance.ToString();
+         //set listview
+         setListView();
+      }
+      public void setListView()
+      {
+         listView1.View = View.Details;
+         listView1.GridLines = true;
+         listView1.FullRowSelect = true;
+
+         //Add column header
+         listView1.Columns.Add("ProductName", 100);
+         listView1.Columns.Add("Price", 70);
+         listView1.Columns.Add("Quantity", 70);
+         /*
+         //Add items in the listview
+         string[] arr = new string[4];
+         ListViewItem itm;
+
+         //Add first item
+         arr[0] = "product_1";
+         arr[1] = "100";
+         arr[2] = "10";
+         itm = new ListViewItem(arr);
+         listView1.Items.Add(itm);
+
+         //Add second item
+         arr[0] = "product_2";
+         arr[1] = "200";
+         arr[2] = "20";
+         itm = new ListViewItem(arr);
+         listView1.Items.Add(itm);
+         */
       }
       private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
       {
@@ -59,7 +91,8 @@ namespace StockManagement_V1._0
       }
       public void addToCartOpt()
       {
-         listView1.Controls.Add(label7);
+         string txt = label7.Text.ToString();
+
       }
 
       private void button2_Click(object sender, EventArgs e)
