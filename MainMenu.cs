@@ -72,5 +72,10 @@ namespace StockManagement_V1._0
          VirtualCartForm vrtCart = new VirtualCartForm();
          vrtCart.Show();
       }
+
+      private void MainMenu_Load(object sender, EventArgs e)
+      {
+
+      }
    }
 }

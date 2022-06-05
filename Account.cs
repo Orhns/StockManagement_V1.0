@@ -8,12 +8,30 @@ namespace StockManagement_V1._0
 {
    internal class Account
    {
-      public string HesapAdi { get; set; }
-      public double Balance { get; set; }
+      public string hesapAdi;
+      private double balance;
 
+      public Account(string h, double b)
+      {
+         this.hesapAdi = h;
+         this.balance = b;
+      }
       public double addMoney(double amount) { 
-         this.Balance = Balance + amount;
-         return Balance; 
+         this.balance = balance + amount;
+         return this.balance; 
+      }
+      public double withDrawMoney(double amount)
+      {
+         this.balance = balance - amount;
+         return this.balance;
+      }
+      public double getBalance()
+      {
+         return this.balance;
+      }
+      public string getHesapAdi()
+      {
+         return this.hesapAdi;
       }
    }
 }

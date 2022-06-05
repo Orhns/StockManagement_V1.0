@@ -47,16 +47,17 @@
          this.label10 = new System.Windows.Forms.Label();
          this.label11 = new System.Windows.Forms.Label();
          this.panel1 = new System.Windows.Forms.Panel();
-         this.label12 = new System.Windows.Forms.Label();
-         this.button3 = new System.Windows.Forms.Button();
-         this.button4 = new System.Windows.Forms.Button();
+         this.label14 = new System.Windows.Forms.Label();
+         this.button8 = new System.Windows.Forms.Button();
+         this.textBox1 = new System.Windows.Forms.TextBox();
          this.button5 = new System.Windows.Forms.Button();
          this.button6 = new System.Windows.Forms.Button();
+         this.button4 = new System.Windows.Forms.Button();
+         this.button3 = new System.Windows.Forms.Button();
+         this.label12 = new System.Windows.Forms.Label();
          this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
          this.label13 = new System.Windows.Forms.Label();
          this.button7 = new System.Windows.Forms.Button();
-         this.button8 = new System.Windows.Forms.Button();
-         this.textBox1 = new System.Windows.Forms.TextBox();
          this.panel2 = new System.Windows.Forms.Panel();
          ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
          this.panel1.SuspendLayout();
@@ -235,7 +236,7 @@
          this.button2.TabIndex = 30;
          this.button2.Text = "Add to Cart";
          this.button2.UseVisualStyleBackColor = false;
-         this.button2.Click += new System.EventHandler(this.button2_Click);
+         this.button2.Click += new System.EventHandler(this.button2_AddToCart_Click);
          // 
          // label10
          // 
@@ -262,6 +263,7 @@
          // 
          this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
          this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+         this.panel1.Controls.Add(this.label14);
          this.panel1.Controls.Add(this.button8);
          this.panel1.Controls.Add(this.textBox1);
          this.panel1.Controls.Add(this.button5);
@@ -279,37 +281,36 @@
          this.panel1.Size = new System.Drawing.Size(840, 120);
          this.panel1.TabIndex = 33;
          // 
-         // label12
+         // label14
          // 
-         this.label12.AutoSize = true;
-         this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label12.Location = new System.Drawing.Point(3, 7);
-         this.label12.Name = "label12";
-         this.label12.Size = new System.Drawing.Size(144, 18);
-         this.label12.TabIndex = 23;
-         this.label12.Text = "Select Customer :";
+         this.label14.AutoSize = true;
+         this.label14.BackColor = System.Drawing.Color.Transparent;
+         this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+         this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label14.Location = new System.Drawing.Point(367, 17);
+         this.label14.Name = "label14";
+         this.label14.Size = new System.Drawing.Size(29, 31);
+         this.label14.TabIndex = 40;
+         this.label14.Text = "0";
          // 
-         // button3
+         // button8
          // 
-         this.button3.BackColor = System.Drawing.Color.DodgerBlue;
-         this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button3.Location = new System.Drawing.Point(3, 38);
-         this.button3.Name = "button3";
-         this.button3.Size = new System.Drawing.Size(118, 33);
-         this.button3.TabIndex = 34;
-         this.button3.Text = "Ümit";
-         this.button3.UseVisualStyleBackColor = false;
+         this.button8.BackColor = System.Drawing.Color.SeaGreen;
+         this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.button8.Location = new System.Drawing.Point(702, 64);
+         this.button8.Name = "button8";
+         this.button8.Size = new System.Drawing.Size(110, 33);
+         this.button8.TabIndex = 39;
+         this.button8.Text = "Withdraw";
+         this.button8.UseVisualStyleBackColor = false;
+         this.button8.Click += new System.EventHandler(this.button8_Withdraw_Click);
          // 
-         // button4
+         // textBox1
          // 
-         this.button4.BackColor = System.Drawing.Color.DodgerBlue;
-         this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button4.Location = new System.Drawing.Point(3, 77);
-         this.button4.Name = "button4";
-         this.button4.Size = new System.Drawing.Size(118, 33);
-         this.button4.TabIndex = 35;
-         this.button4.Text = "Meral";
-         this.button4.UseVisualStyleBackColor = false;
+         this.textBox1.Location = new System.Drawing.Point(592, 70);
+         this.textBox1.Name = "textBox1";
+         this.textBox1.Size = new System.Drawing.Size(94, 22);
+         this.textBox1.TabIndex = 38;
          // 
          // button5
          // 
@@ -321,6 +322,7 @@
          this.button5.TabIndex = 37;
          this.button5.Text = "Ali";
          this.button5.UseVisualStyleBackColor = false;
+         this.button5.Click += new System.EventHandler(this.button5_Click);
          // 
          // button6
          // 
@@ -332,6 +334,41 @@
          this.button6.TabIndex = 36;
          this.button6.Text = "Mansur";
          this.button6.UseVisualStyleBackColor = false;
+         this.button6.Click += new System.EventHandler(this.button6_Click);
+         // 
+         // button4
+         // 
+         this.button4.BackColor = System.Drawing.Color.DodgerBlue;
+         this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.button4.Location = new System.Drawing.Point(3, 77);
+         this.button4.Name = "button4";
+         this.button4.Size = new System.Drawing.Size(118, 33);
+         this.button4.TabIndex = 35;
+         this.button4.Text = "Meral";
+         this.button4.UseVisualStyleBackColor = false;
+         this.button4.Click += new System.EventHandler(this.button4_Click);
+         // 
+         // button3
+         // 
+         this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+         this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.button3.Location = new System.Drawing.Point(3, 38);
+         this.button3.Name = "button3";
+         this.button3.Size = new System.Drawing.Size(118, 33);
+         this.button3.TabIndex = 34;
+         this.button3.Text = "Ümit";
+         this.button3.UseVisualStyleBackColor = false;
+         this.button3.Click += new System.EventHandler(this.button3_Click);
+         // 
+         // label12
+         // 
+         this.label12.AutoSize = true;
+         this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label12.Location = new System.Drawing.Point(3, 7);
+         this.label12.Name = "label12";
+         this.label12.Size = new System.Drawing.Size(144, 18);
+         this.label12.TabIndex = 23;
+         this.label12.Text = "Select Customer :";
          // 
          // numericUpDown1
          // 
@@ -339,6 +376,11 @@
          this.numericUpDown1.Name = "numericUpDown1";
          this.numericUpDown1.Size = new System.Drawing.Size(80, 22);
          this.numericUpDown1.TabIndex = 34;
+         this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
          // 
          // label13
          // 
@@ -360,24 +402,7 @@
          this.button7.TabIndex = 36;
          this.button7.Text = "Purchase";
          this.button7.UseVisualStyleBackColor = false;
-         // 
-         // button8
-         // 
-         this.button8.BackColor = System.Drawing.Color.SeaGreen;
-         this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.button8.Location = new System.Drawing.Point(702, 64);
-         this.button8.Name = "button8";
-         this.button8.Size = new System.Drawing.Size(110, 33);
-         this.button8.TabIndex = 39;
-         this.button8.Text = "Withdraw";
-         this.button8.UseVisualStyleBackColor = false;
-         // 
-         // textBox1
-         // 
-         this.textBox1.Location = new System.Drawing.Point(592, 70);
-         this.textBox1.Name = "textBox1";
-         this.textBox1.Size = new System.Drawing.Size(94, 22);
-         this.textBox1.TabIndex = 38;
+         this.button7.Click += new System.EventHandler(this.button7_PurchaseBUTTON_Click);
          // 
          // panel2
          // 
@@ -458,5 +483,6 @@
       private System.Windows.Forms.Button button8;
       private System.Windows.Forms.TextBox textBox1;
       private System.Windows.Forms.Panel panel2;
+      private System.Windows.Forms.Label label14;
    }
 }

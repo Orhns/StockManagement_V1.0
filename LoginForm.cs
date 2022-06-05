@@ -29,5 +29,10 @@ namespace StockManagement_V1._0
             mainMenu.Show();
          }
       }
+
+      private void LoginForm_Load(object sender, EventArgs e)
+      {
+
+      }
    }
 }

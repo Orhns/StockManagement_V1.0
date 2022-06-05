@@ -33,9 +33,9 @@
          this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
          this.showProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
          this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+         this.virtualCartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
          this.userSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
          this.pContainer = new System.Windows.Forms.Panel();
-         this.virtualCartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
          this.menuStrip1.SuspendLayout();
          this.SuspendLayout();
          // 
@@ -82,6 +82,13 @@
          this.stockToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
          this.stockToolStripMenuItem.Text = "Stock";
          // 
+         // virtualCartToolStripMenuItem
+         // 
+         this.virtualCartToolStripMenuItem.Name = "virtualCartToolStripMenuItem";
+         this.virtualCartToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+         this.virtualCartToolStripMenuItem.Text = "Virtual Cart";
+         this.virtualCartToolStripMenuItem.Click += new System.EventHandler(this.virtualCartToolStripMenuItem_Click);
+         // 
          // userSettingsToolStripMenuItem
          // 
          this.userSettingsToolStripMenuItem.Name = "userSettingsToolStripMenuItem";
@@ -97,13 +104,6 @@
          this.pContainer.Size = new System.Drawing.Size(776, 407);
          this.pContainer.TabIndex = 1;
          // 
-         // virtualCartToolStripMenuItem
-         // 
-         this.virtualCartToolStripMenuItem.Name = "virtualCartToolStripMenuItem";
-         this.virtualCartToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-         this.virtualCartToolStripMenuItem.Text = "Virtual Cart";
-         this.virtualCartToolStripMenuItem.Click += new System.EventHandler(this.virtualCartToolStripMenuItem_Click);
-         // 
          // MainMenu
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -116,6 +116,7 @@
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "MainMenu";
          this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
+         this.Load += new System.EventHandler(this.MainMenu_Load);
          this.menuStrip1.ResumeLayout(false);
          this.menuStrip1.PerformLayout();
          this.ResumeLayout(false);
